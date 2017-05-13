@@ -12,6 +12,7 @@
 		19C543E11EC7504600210736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C543DF1EC7504600210736 /* Main.storyboard */; };
 		19C543E31EC7504600210736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C543E21EC7504600210736 /* Assets.xcassets */; };
 		19C543E61EC7504600210736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C543E41EC7504600210736 /* LaunchScreen.storyboard */; };
+		19F4315B1EC76F1200884C6F /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F4315A1EC76F1200884C6F /* DefinitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		19C543E21EC7504600210736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19C543E51EC7504600210736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19C543E71EC7504600210736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19F4315A1EC76F1200884C6F /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				19C543DB1EC7504600210736 /* AppDelegate.swift */,
 				19C543DD1EC7504600210736 /* ViewController.swift */,
+				19F4315A1EC76F1200884C6F /* DefinitionViewController.swift */,
 				19C543DF1EC7504600210736 /* Main.storyboard */,
 				19C543E21EC7504600210736 /* Assets.xcassets */,
 				19C543E41EC7504600210736 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19C543DE1EC7504600210736 /* ViewController.swift in Sources */,
+				19F4315B1EC76F1200884C6F /* DefinitionViewController.swift in Sources */,
 				19C543DC1EC7504600210736 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,7 @@
 				19C543EC1EC7504600210736 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

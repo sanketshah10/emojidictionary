@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var emojitableview: UITableView!
     
-    var emojis = ["😀", "🙂", "☹️", "😫", "😱"] // the emoji array
+    var emojis : [Emoji] = [] // the emoji array
     
     
     override func viewDidLoad() {
@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         emojitableview.dataSource = self
         emojitableview.delegate = self
+        
+        emojis = emojiarray()
         
         // this is required for table views
         
@@ -34,7 +36,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        cell.textLabel?.text = emojis[indexPath.row]
+        let emoji = emojis[indexPath.row]
+        cell.textLabel?.text = emoji.stringemoji
         
         // this allocates the different emojis to specific index of array in the rows
         return cell
@@ -48,13 +51,48 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let defVC = segue.destinationViewController as! DefinitionViewController
         
-        defVC.emoji = sender as! String
+        defVC.emoji = sender as! Emoji
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    func emojiarray() -> [Emoji] {
+        let emoji1 = Emoji()
+        emoji1.stringemoji = "😀"
+        emoji1.definition = "Happy smiley"
+        emoji1.category = "Smiley"
+        emoji1.birthyear = 2011
+        
+        let emoji2 = Emoji()
+        emoji2.stringemoji = "☹️"
+        emoji2.definition = "Sad smiley"
+        emoji2.category = "Smiley"
+        emoji2.birthyear = 2013
+    
+        let emoji3 = Emoji()
+        emoji3.stringemoji = "☹️"
+        emoji3.definition = "Very sad smiley"
+        emoji3.category = "Smiley"
+        emoji3.birthyear = 2009
+    
+        let emoji4 = Emoji()
+        emoji4.stringemoji = "😫"
+        emoji4.definition = "Crying smiley"
+        emoji4.category = "Smiley"
+        emoji4.birthyear = 2008
+        
+        let emoji5 = Emoji()
+        emoji5.stringemoji = "😱"
+        emoji5.definition = "Shocked smiley"
+        emoji5.category = "Smiley"
+        emoji5.birthyear = 2014
+    
+    return [emoji1, emoji2, emoji3, emoji4, emoji5]
+    
+    }
+    
 
 }
 

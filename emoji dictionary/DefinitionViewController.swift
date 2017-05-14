@@ -10,14 +10,27 @@ import UIKit
 
 class DefinitionViewController: UIViewController {
 
-    @IBOutlet weak var emojiLable: UILabel!
     
-    var emoji = "No Text"
+    
+    @IBOutlet weak var stringemoji: UILabel!
+ 
+    @IBOutlet weak var definition: UILabel!
+    
+    @IBOutlet weak var category: UILabel!
+    
+    @IBOutlet var birthyear: UIView!
+    
+    
+    var emoji = Emoji()
     
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        emojiLable.text = emoji
+        stringemoji.text = emoji.stringemoji
+        definition.text = emoji.definition
+        category.text = emoji.category
+        definition.text = emoji.definition
+        
         
 }
 

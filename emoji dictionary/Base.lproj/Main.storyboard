@@ -52,14 +52,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQT-FT-buV">
-                                <rect key="frame" x="225" y="99" width="150" height="180"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQT-FT-buV">
+                                <rect key="frame" x="225" y="143" width="150" height="180"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="150"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="I'm so cool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvt-ir-dwT">
-                                <rect key="frame" x="259" y="319" width="82" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm so cool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvt-ir-dwT">
+                                <rect key="frame" x="259" y="363" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Smiley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEG-gG-E3a">
+                                <rect key="frame" x="235" y="414" width="130" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birth Year: 2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-1S-h97">
+                                <rect key="frame" x="239" y="465" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -68,13 +80,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hQT-FT-buV" firstAttribute="top" secondItem="Pmp-N7-A65" secondAttribute="bottom" constant="79" id="BQx-tw-2au"/>
+                            <constraint firstItem="fEG-gG-E3a" firstAttribute="centerX" secondItem="2tF-yF-loC" secondAttribute="centerX" id="D8O-cP-fRc"/>
+                            <constraint firstItem="KaS-1S-h97" firstAttribute="centerX" secondItem="2tF-yF-loC" secondAttribute="centerX" id="Hyu-OV-onf"/>
                             <constraint firstItem="Kvt-ir-dwT" firstAttribute="top" secondItem="hQT-FT-buV" secondAttribute="bottom" constant="40" id="NSs-nX-1Tp"/>
+                            <constraint firstItem="fEG-gG-E3a" firstAttribute="top" secondItem="Kvt-ir-dwT" secondAttribute="bottom" constant="30" id="Nic-T8-bEj"/>
+                            <constraint firstItem="KaS-1S-h97" firstAttribute="top" secondItem="fEG-gG-E3a" secondAttribute="bottom" constant="30" id="Wtc-tU-0L4"/>
                             <constraint firstItem="hQT-FT-buV" firstAttribute="centerX" secondItem="2tF-yF-loC" secondAttribute="centerX" id="boB-Nh-Ndq"/>
+                            <constraint firstItem="KaS-1S-h97" firstAttribute="centerX" secondItem="2tF-yF-loC" secondAttribute="centerX" id="hPL-ZA-bno"/>
                             <constraint firstItem="Kvt-ir-dwT" firstAttribute="centerX" secondItem="2tF-yF-loC" secondAttribute="centerX" id="uQE-S6-ZoQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="birthyear" destination="2tF-yF-loC" id="KEK-vs-TUq"/>
+                        <outlet property="category" destination="fEG-gG-E3a" id="qzp-6A-14m"/>
+                        <outlet property="definition" destination="Kvt-ir-dwT" id="pYR-F9-aWb"/>
                         <outlet property="emojiLable" destination="hQT-FT-buV" id="iVm-7z-iCd"/>
+                        <outlet property="stringemoji" destination="hQT-FT-buV" id="obT-uc-ESs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3g-nG-QgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
